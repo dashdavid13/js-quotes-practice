@@ -1,124 +1,102 @@
-// Get all quotes 
-const quoteCollection = document.querySelector("ul#quote-list")
-const form = document.querySelector("form#new-quote-form")
-
-function renderOneQuote(quoteObj) {
-    let likes = 0
-    if (quoteObj.likes) {
-    likes = quoteObj.likes.length
-    }
-
-    
-    const li = document.createElement("li")
-    li.className = "quote-card"
-    li.innerHTML = `
-    <blockquote class="blockquote">
-    <p class="mb-0">${quoteObj.quote}</p>
-    <footer class="blockquote-footer">${quoteObj.author}</footer>
-    <br>
-    <button class='btn-success'data-id= "${quoteObj.id}">Likes: <span>${likes}</span></button>
-    <button class='btn-danger' data-id= "${quoteObj.id}">Delete</button>
-    </blockquote>
-    `
-    quoteCollection.append(li)
-  }
-  
-  
-  
-  function getQuotes() {
-    return fetch("http://localhost:3000/quotes?_embed=likes")
-    .then(res => res.json()) 
-}
-    getQuotes().then(quotesArray => {
-        quotesArray.forEach(quotesArray => {
-            renderOneQuote(quotesArray)
-        }) 
-    }) 
-
-// Render a new form for a new quote
-
-form.addEventListener("submit", function (event) {
-    event.preventDefault();
-  
-    const newQuoteObject = {
-      quote: event.target.quote.value,
-      author: event.target.author.value,
-      likes: 0,
-    };
-  
-    fetch("http://localhost:3000/quotes", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(newQuoteObject),
-    })
-      .then((response) => response.json())
-      .then((actualNewQuoteFromServer) => {
-        console.log("Success:", actualNewQuoteFromServer);
-        // and slap the new post on the DOM
-        renderOneQuote(actualNewQuoteFromServer);
-      });
-  
-    event.target.reset();
-  });
-
-//  Like button 
-
-quoteCollection.addEventListener("click", event => {
-    if (event.target.matches(".btn-success")) {
-        
-        
-      const id = parseInt(event.target.dataset.id)
-      const newLikeObj = {
-        quoteId: id
-      }
-
-      createLike(newLikeObj)
-
-      const span = event.target.querySelector("span")
-      const numberOfLikes = parseInt(span.textContent) + 1
-      span.textContent = numberOfLikes
-  
-    
-     
-  }
-})
-  
+let ul = document.querySelector("#quote-list")
+let form = document.querySelector("#new-quote-form")
 
 
-
-
-// Delete button 
-quoteCollection.addEventListener("click", event => {
-    if (event.target.matches(".btn-danger")) {
-        const id = event.target.dataset.id
-        const quoteLi = event.target.closest(".quote-card")
-        deleteQuote(id)
-        quoteLi.remove()
-    }
-})
-
-
-
-// like fetch function 
-function createLike(likeObj){
-fetch(`http://localhost:3000/likes`, {
-    method: 'POST',
-    headers: {
-        'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(likeObj),
-})
+fetch('http://localhost:3000/quotes?_embed=likes')
   .then(response => response.json())
-  .then(data => {
-      console.log(data)
+  .then((data) =>{
+    data.forEach((quoteObj) => {
+      renderQuotes(quoteObj)
+    })
   })
 
-}
 
-function deleteQuote(id) {
-    fetch (`http:localhost:3000/quotes/${id}`, {
-        method: 'DELETE',
-    })
-}
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  
+  let author = event.target["author"].value
+  let quoteContent = event.target["new-quote"].value
+
+  fetch('http://localhost:3000/quotes', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      author: author,
+      quote: quoteContent,
+    }),
+  })
+  .then(response => response.json())
+  .then(newQuote => {
+
+    newQuote.likes = []
+    renderQuotes(newQuote);
+  })
+
+});
+
+
+
+function renderQuotes(quoteObj){
+ let  outerElement = document.createElement("li")
+ outerElement.className = "quote-card"
+
+  let block = document.createElement("blockquote")
+  block.setAttribute('class', 'blockquote')
+
+  let p = document.createElement("p")
+  p.setAttribute('class', 'mb-0')
+  p.innerText = quoteObj.quote
+
+  let footer = document.createElement("footer")
+  footer.setAttribute('class','blockquote-footer')
+  footer.innerText = quoteObj.author
+
+  let likeButton = document.createElement("button")
+  likeButton.setAttribute('class', 'btn-success')
+  likeButton.innerText = "Likes:"
+
+  let span = document.createElement("span")
+  span.innerText = `${quoteObj.likes.length}`
+
+
+  let deleteButton = document.createElement("button")
+  deleteButton.className = "btn-danger"
+  deleteButton.textContent = "Delete"
+
+  likeButton.append(span)
+  block.append(p,footer,likeButton,deleteButton)
+  outerElement.append(block)
+  ul.append(outerElement)
+
+ deleteButton.addEventListener("click", (e) => {
+   fetch(`http://localhost:3000/quotes/${quoteObj.id}`,{
+     method: "DELETE"
+   })
+   .then(r => r.json())
+   .then(() => {
+    outerElement.remove()
+   })
+ })
+
+ likeButton.addEventListener("click", (e) => {
+
+  fetch('http://localhost:3000/likes', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      quoteId: quoteObj.id
+    }),
+  })
+  .then(response => response.json())
+  .then(newLike => {
+    quoteObj.likes.push(newLike)
+    span.innerHTML = quoteObj.likes.length
+  })
+ })
+
+};
+

@@ -27,29 +27,14 @@
       "author": "Audre Lorde"
     },
     {
-      "id": 7,
-      "quote": "Our greatest glory is not in never falling, but in rising everytime we fall.",
-      "author": "Confucius"
+      "author": "fred the cat",
+      "quote": "yo yo yo yo ",
+      "id": 7
     },
     {
-      "id": 8,
-      "quote": "Don't count the days, make the days count.",
-      "author": "Muhammad Ali"
-    },
-    {
-      "id": 9,
-      "quote": "Not everything that is faced can be changed, but nothing can be changed until it is faced.",
-      "author": "James Baldwin"
-    },
-    {
-      "id": 10,
-      "quote": "You know, failure hurts. Any kind of failure stings. If you live in the sting, you will undoubtedly fail. My way of getting past the sting is to say no, I’m just not going to let this get me down.",
-      "author": "Sonia Sotomayor"
-    },
-    {
-      "id": 11,
-      "quote": "The here and now is all we have, and if we play it right it's all we'll need.",
-      "author": "Ann Richards"
+      "author": "asdfasdf",
+      "quote": "asdf",
+      "id": 8
     }
   ],
   "likes": [
@@ -443,6 +428,422 @@
     {
       "quoteId": 3,
       "id": 141
+    },
+    {
+      "quoteId": null,
+      "id": 142
+    },
+    {
+      "quoteId": null,
+      "id": 143
+    },
+    {
+      "quoteId": null,
+      "id": 144
+    },
+    {
+      "quoteId": null,
+      "id": 145
+    },
+    {
+      "quoteId": null,
+      "id": 146
+    },
+    {
+      "quoteId": null,
+      "id": 147
+    },
+    {
+      "quoteId": null,
+      "id": 148
+    },
+    {
+      "quoteId": null,
+      "id": 149
+    },
+    {
+      "quoteId": null,
+      "id": 150
+    },
+    {
+      "quoteId": null,
+      "id": 151
+    },
+    {
+      "quoteId": null,
+      "id": 152
+    },
+    {
+      "quoteId": null,
+      "id": 153
+    },
+    {
+      "quoteId": null,
+      "id": 154
+    },
+    {
+      "quoteId": null,
+      "id": 155
+    },
+    {
+      "quoteId": null,
+      "id": 156
+    },
+    {
+      "quoteId": null,
+      "id": 157
+    },
+    {
+      "quoteId": null,
+      "id": 158
+    },
+    {
+      "quoteId": null,
+      "id": 159
+    },
+    {
+      "quoteId": null,
+      "id": 160
+    },
+    {
+      "quoteId": null,
+      "id": 161
+    },
+    {
+      "quoteId": null,
+      "id": 162
+    },
+    {
+      "quoteId": null,
+      "id": 163
+    },
+    {
+      "quoteId": null,
+      "id": 164
+    },
+    {
+      "quoteId": null,
+      "id": 165
+    },
+    {
+      "quoteId": null,
+      "id": 166
+    },
+    {
+      "quoteId": null,
+      "id": 167
+    },
+    {
+      "quoteId": null,
+      "id": 168
+    },
+    {
+      "quoteId": null,
+      "id": 169
+    },
+    {
+      "quoteId": null,
+      "id": 170
+    },
+    {
+      "quoteId": null,
+      "id": 171
+    },
+    {
+      "quoteId": null,
+      "id": 172
+    },
+    {
+      "quoteId": null,
+      "id": 173
+    },
+    {
+      "quoteId": null,
+      "id": 174
+    },
+    {
+      "quoteId": null,
+      "id": 175
+    },
+    {
+      "quoteId": null,
+      "id": 176
+    },
+    {
+      "quoteId": null,
+      "id": 177
+    },
+    {
+      "quoteId": null,
+      "id": 178
+    },
+    {
+      "quoteId": null,
+      "id": 179
+    },
+    {
+      "quoteId": null,
+      "id": 180
+    },
+    {
+      "quoteId": null,
+      "id": 181
+    },
+    {
+      "quoteId": null,
+      "id": 182
+    },
+    {
+      "quoteId": null,
+      "id": 183
+    },
+    {
+      "quoteId": null,
+      "id": 184
+    },
+    {
+      "quoteId": null,
+      "id": 185
+    },
+    {
+      "quoteId": null,
+      "id": 186
+    },
+    {
+      "quoteId": null,
+      "id": 187
+    },
+    {
+      "quoteId": null,
+      "id": 188
+    },
+    {
+      "quoteId": null,
+      "id": 189
+    },
+    {
+      "quoteId": null,
+      "id": 190
+    },
+    {
+      "quoteId": null,
+      "id": 191
+    },
+    {
+      "quoteId": null,
+      "id": 192
+    },
+    {
+      "quoteId": null,
+      "id": 193
+    },
+    {
+      "quoteId": null,
+      "id": 194
+    },
+    {
+      "quoteId": null,
+      "id": 195
+    },
+    {
+      "quoteId": null,
+      "id": 196
+    },
+    {
+      "quoteId": null,
+      "id": 197
+    },
+    {
+      "quoteId": null,
+      "id": 198
+    },
+    {
+      "quoteId": null,
+      "id": 199
+    },
+    {
+      "quoteId": null,
+      "id": 200
+    },
+    {
+      "quoteId": null,
+      "id": 201
+    },
+    {
+      "quoteId": null,
+      "id": 202
+    },
+    {
+      "quoteId": null,
+      "id": 203
+    },
+    {
+      "quoteId": null,
+      "id": 204
+    },
+    {
+      "quoteId": null,
+      "id": 205
+    },
+    {
+      "quoteId": null,
+      "id": 206
+    },
+    {
+      "quoteId": null,
+      "id": 207
+    },
+    {
+      "likes": null,
+      "id": 208
+    },
+    {
+      "quoteId": 2,
+      "id": 209
+    },
+    {
+      "quoteId": 2,
+      "id": 210
+    },
+    {
+      "quoteId": 2,
+      "id": 211
+    },
+    {
+      "quoteId": 3,
+      "id": 212
+    },
+    {
+      "quoteId": 3,
+      "id": 213
+    },
+    {
+      "quoteId": 3,
+      "id": 214
+    },
+    {
+      "quoteId": 3,
+      "id": 215
+    },
+    {
+      "quoteId": 3,
+      "id": 216
+    },
+    {
+      "quoteId": 4,
+      "id": 217
+    },
+    {
+      "quoteId": 4,
+      "id": 218
+    },
+    {
+      "quoteId": 4,
+      "id": 219
+    },
+    {
+      "quoteId": 4,
+      "id": 220
+    },
+    {
+      "quoteId": 4,
+      "id": 221
+    },
+    {
+      "quoteId": 4,
+      "id": 222
+    },
+    {
+      "quoteId": 5,
+      "id": 223
+    },
+    {
+      "quoteId": 5,
+      "id": 224
+    },
+    {
+      "quoteId": 5,
+      "id": 225
+    },
+    {
+      "quoteId": 5,
+      "id": 226
+    },
+    {
+      "quoteId": 6,
+      "id": 227
+    },
+    {
+      "quoteId": 6,
+      "id": 228
+    },
+    {
+      "quoteId": 7,
+      "id": 229
+    },
+    {
+      "quoteId": 7,
+      "id": 230
+    },
+    {
+      "quoteId": 7,
+      "id": 231
+    },
+    {
+      "quoteId": 7,
+      "id": 232
+    },
+    {
+      "quoteId": 7,
+      "id": 233
+    },
+    {
+      "quoteId": 7,
+      "id": 234
+    },
+    {
+      "quoteId": 7,
+      "id": 235
+    },
+    {
+      "quoteId": 7,
+      "id": 236
+    },
+    {
+      "quoteId": 7,
+      "id": 237
+    },
+    {
+      "quoteId": 7,
+      "id": 238
+    },
+    {
+      "quoteId": 7,
+      "id": 239
+    },
+    {
+      "quoteId": 7,
+      "id": 240
+    },
+    {
+      "quoteId": 7,
+      "id": 241
+    },
+    {
+      "quoteId": 8,
+      "id": 242
+    },
+    {
+      "quoteId": 8,
+      "id": 243
+    },
+    {
+      "quoteId": 8,
+      "id": 244
+    },
+    {
+      "quoteId": 8,
+      "id": 245
     }
   ]
 }
